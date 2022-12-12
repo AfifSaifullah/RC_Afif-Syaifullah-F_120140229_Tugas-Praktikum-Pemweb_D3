@@ -1,0 +1,245 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minggu 3</title>
+
+    <style>
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .disFlex {
+            display: flex;
+        }
+
+        .firstBig::first-letter {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: rgb(42, 161, 165);
+        }
+
+        .main-header {
+            width: 100%;
+            background-color: aliceblue;
+            border-radius: 20px 20px 0px 0px;
+            overflow: hidden;
+        }
+
+        .main-header__img {
+            height: auto;
+            max-width: 200px;
+        }
+
+        .main-header__title {
+            padding: 30px;
+            text-align: left;
+        }
+
+        .main-nav {
+            width: 100%;
+        }
+
+        .main-nav__list {
+            padding: 10px;
+            text-align: right;
+            margin-top: 0px;
+            list-style-position: inside;
+            background-color: rgb(39, 136, 120);
+            border-radius: 0px 0px 20px 20px;
+            overflow: hidden;
+        }
+
+        .main-nav__item {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .main-nav__item > a {
+            color: #fff;
+        }
+
+        .main-sect__head {
+            padding: 10px;
+            color: #fff;
+            width: max-content;
+            background-color: rgb(39, 136, 120);
+        }
+
+        .main-sect__head + * {
+            margin-left: 30px;
+        }
+
+        .main-sect__content__p {
+            max-width: max-content;
+            min-width: 360px;
+            padding: 20px;
+            text-align: justify;
+            background-color: aliceblue;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .main-sect__fig > iframe{
+            width: 560px;
+            max-width: 560px;
+            aspect-ratio: 16 / 9;
+        }
+
+        .main-sect__table {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            margin-left: 30px;
+        }
+
+        .main-sect__thead {
+            padding: 5px;
+            background-color: rgb(157, 171, 184);
+            color: azure;
+        }
+
+        .main-sect__td {
+            background-color: azure;
+            padding: 10px;
+        }
+
+        .main-sect__form {
+            padding: 20px;
+            width: 300px;
+            background-color: rgb(178, 226, 233);
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type=submit] {
+            padding: 5px;
+            margin-top: 50px;
+            width: 100%;
+            border-radius: 20px;
+            background-color: rgb(42, 161, 165);
+            color:#fff;
+        }
+
+        @media only screen and (max-width: 1080px) {
+            .main-sect__content {
+                display: block;
+            }
+
+            .main-sect__head + * {
+                margin-left: 0px;
+            }
+
+            .main-sect__fig > iframe{
+                width: 100%;
+                margin: 0 auto;
+                display: block;
+                aspect-ratio: 16 / 9;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="main-header disFlex">
+        <img class="main-header__img" src="https://images.unsplash.com/photo-1518270444395-285fb1a25728?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="My photograph"/>
+        <div class="main-header__title">
+            <h1>Hai, Saya Afif Syaifullah Fattah.</h1>
+            <p>Seorang mahasiswa IF Itera</p>
+        </div>
+    </header>
+    
+    <aside class="main-aside">
+        <nav class="main-nav">
+            <ul class="main-nav__list">
+                <li class="main-nav__item"><a href="#about">Tentang Saya</a></li>
+                <li class="main-nav__item"><a href="#work">Pengalaman Kerja</a></li>
+                <li class="main-nav__item"><a href="#contact">Hubungi Saya</a></li>
+            </ul>
+        </nav>
+    </aside>
+    
+    <main>
+        <section class="main-sect" id="about">
+            <h2 class="main-sect__head"># Tentang Saya</h2>
+
+            <div class="main-sect__content disFlex">
+                <p class="main-sect__content__p firstBig">
+                    Nama saya Afif Syaifullah Fattah, saya adalah mahasiswa IF dari Itera dengan NIM 12014022. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, ipsum cum doloribus repellat dolorem, dolor ut saepe omnis veritatis earum quod ab. Possimus iste repudiandae optio ducimus! Quam, aliquam fugit?
+                </p>
+                <figure class="main-sect__fig">
+                    <iframe src="https://www.youtube.com/embed/yMUZwsLs4Es" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <figcaption>Video saya</figcaption>
+                </figure>
+            </div>
+        </section>
+    
+        <section class="main-sect" id="work">
+            <h2 class="main-sect__head"># Pengalaman Kerja</h2>
+
+            <table class="main-sect__table">
+                <thead>
+                    <tr>
+                        <th class="main-sect__thead" rowspan="2">No</th>
+                        <th class="main-sect__thead" rowspan="2">Posisi</th>
+                        <th class="main-sect__thead" rowspan="2">Perusahaan</th>
+                        <th class="main-sect__thead" colspan="2">Waktu</th>
+                    </tr>
+                    <tr>
+                        <th>Mulai</th>
+                        <th>Selesai</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="main-sect__td">1</td>
+                        <td class="main-sect__td">Melatih materi KSN Bidang Informatika di SMA Al-Kautsar</td>
+                        <td class="main-sect__td">-</td>
+                        <td class="main-sect__td">2020</td>
+                        <td class="main-sect__td">2021</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    
+        <section class="main-sect" id="contact">
+            <h2 class="main-sect__head"># Hubungi Saya</h2>
+
+            <div class="main-sect__form">
+                <form action="#" method="get">
+                    <label for="nama">Nama:</label>
+                    <div class="main-sect__form__input">
+                        <input type="text" name="nama" id="nama">
+                    </div>
+    
+                    <p>Sudah nonton film saya?</p>
+                    <div class="main-sect__form__input disFlex">
+                        <input type="radio" name="sudah" id="sudah">
+                        <label for="sudah">Sudah</label>
+                        <br>
+                        <input type="radio" name="belum" id="belum">
+                        <label for="belum">Belum</label>
+                    </div>
+                    <br>
+    
+                    <p>Apa coba?</p>
+                    <div class="main-sect__form__input disFlex">
+                        <input type="checkbox" name="ini" id="ini">
+                        <label for="ini">ini</label><br>
+                        <input type="checkbox" name="itu" id="itu">
+                        <label for="itu">itu</label><br>
+                        <input type="checkbox" name="anu" id="anu">
+                        <label for="anu">anu</label>
+                    </div>
+    
+                    <div class="main-sect__form__input">
+                        <input type="submit" value="KIRIM">
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>End</p>
+    </footer>
+</body>
+</html>
